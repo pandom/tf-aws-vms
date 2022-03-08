@@ -7,7 +7,17 @@ terraform {
     hcp = {
         source = "hashicorp/hcp"
     }
+    google = {
+      source = "hashicorp/google"
+      version = "4.11.0"
+    }
   }
+}
+provider "google" {
+  region = var.gcpregion
+  project = var.gcpproject
+  zone = var.gcpregion
+  
 }
 provider "hcp" {}
 
@@ -21,19 +31,19 @@ provider "aws" {
         ttl = "72"
     }
   }
-  region = var.region
+  region = var.awsregion
 }
 
-# data "terraform_remote_state" "tf_aws_core" {
-#   backend = "remote"
+data "terraform_remote_state" "tf_aws_core" {
+  backend = "remote"
 
-#   config = {
-#     organization = "burkey"
-#     workspaces = {
-#       name = "tf-aws-core"
-#     }
-#   }
-# }
+  config = {
+    organization = "burkey"
+    workspaces = {
+      name = "tf-aws-core"
+    }
+  }
+}
 
 locals {
 #   public_subnets = data.terraform_remote_state.tf_aws_core.outputs.public_subnets

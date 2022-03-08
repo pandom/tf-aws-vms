@@ -1,6 +1,17 @@
 
-variable "region" {
+variable "gcpproject" {
+    type = string
+    default = "hc-52a8750f60c84079ab217c03013"
+  
+}
+variable "awsregion" {
     default = "ap-southeast-2"
+    type = string
+    description = "sydney, australia"
+}
+
+variable "gcpregion" {
+    default = "australia-southeast2-a"
     type = string
     description = "sydney, australia"
 }
@@ -12,7 +23,7 @@ variable "instance_type" {
 }
 
 variable "hcp_packer_bucket" {
-    default = "burkey-hcp-packer"
+    default = "burkey-golden-ubuntu"
     type = string
     description = "hcp bucket for iterations"
   
