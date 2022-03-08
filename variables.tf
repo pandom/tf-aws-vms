@@ -28,3 +28,11 @@ variable "hcp_packer_bucket" {
     description = "hcp bucket for iterations"
   
 }
+
+variable "hardcoded_cloud_image" {
+    default = "packer-1646372218"
+    type = string
+    description = "hardcoded value for Run Trigger"
+
+  
+}
