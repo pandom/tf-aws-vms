@@ -36,7 +36,8 @@ resource "google_compute_instance" "default" {
 
   boot_disk {
     initialize_params {
-      image = data.hcp_packer_image.ubuntu_gce.cloud_image_id
+       image = data.hcp_packer_image.ubuntu_gce.cloud_image_id
+      #image = var.hardcoded_cloud_image
     }
   }
 

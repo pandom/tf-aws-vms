@@ -30,7 +30,7 @@ variable "hcp_packer_bucket" {
 }
 
 variable "hardcoded_cloud_image" {
-    default = "packer-1646372218"
+    default = "packer-1646370185"
     type = string
     description = "hardcoded value for Run Trigger"
 
