@@ -1,7 +1,7 @@
 
 variable "gcpproject" {
     type = string
-    default = "hc-2f9e4edd6f864e6a82c45a6dd79"
+    default = "hc-24a8e492b4d4480484b7b748091"
   
 }
 variable "awsregion" {
